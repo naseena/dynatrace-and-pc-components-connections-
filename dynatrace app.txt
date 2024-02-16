@@ -1,0 +1,58 @@
+Before You Begin
+See the Dynatrace Verification Overview.
+
+
+Step 1: Generate Dynatrace Access Token
+Dynatrace requires token-based authentication for accessing the Dynatrace API. For more information, see Access tokens from Dynatrace.
+
+To generate a Dynatrace access token, do the following:
+
+Log into your Dynatrace environment.
+
+In the navigation menu, click Settings, and then click Integration.
+
+Select Dynatrace API. The Dynatrace API page appears.
+
+
+
+Enter a token name in the text field. The default Dynatrace API token switches are sufficient for Harness.
+
+Click Generate. The token appears in the token list.
+
+Click Edit. The token details appear.
+
+
+
+Click Copy. You will use this token when connecting Harness to Dynatrace, described below.
+
+Step 2: Add Dynatrace Verification Provider
+To add Dynatrace as a verification provider, do the following:
+
+In Harness, click Setup.
+
+Click Connectors.
+
+Click Verification Providers.
+
+Click Add Verification Provider, and select Dynatrace. The Dynatrace dialog for your provider appears.
+
+
+
+Step 3: URL
+The URL of your Dynatrace account. The URL has the following syntax:
+
+https://your_environment_ID.live.dynatrace.com
+
+HTTPS is mandatory for Dynatrace connections.
+
+Step 4: API Token
+For secrets and other sensitive settings, select or create a new Harness Encrypted Text secret.In Encrypted API Token, enter in the API token you created in Dynatrace, described above.
+
+Step 5: Display Name
+The name for the Dynatrace verification provider connection in Harness. If you will have multiple Dynatrace connections, enter a unique name.
+
+You will use this name to select this connection when integrating Dynatrace with the Verify Steps of your workflows, described below.
+
+Step 6: Usage Scope
+Usage scope is inherited from the secrets used in the settings.
+
